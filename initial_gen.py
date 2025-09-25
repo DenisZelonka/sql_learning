@@ -129,16 +129,6 @@ def create_customers():
             for x in range(500)
         ],
     )
-    cursor.execute(
-        "insert into Customers (name,email) values (?,?)",
-        [
-            (
-                random.choice(name),
-                random.choice(name) + "." + random.choice(surname) + "@gmail.com",
-            )
-            for x in range(500)
-        ],
-    )
     conn.commit()
 
 
